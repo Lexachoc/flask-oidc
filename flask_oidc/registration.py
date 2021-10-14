@@ -109,7 +109,7 @@ def register_client(provider_info, redirect_uris, initial_access_token=None):
 
     .. versionadded:: 1.0
     """
-    client_type = check_redirect_uris(redirect_uris)
+    client_type = check_redirect_uris(redirect_uris, "web")
 
     submit_info = {
         "redirect_uris": redirect_uris,
