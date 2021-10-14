@@ -74,8 +74,9 @@ def main():
     if args.debug:
         print('Provider info: %s' % OP)
     try:
-        reg_info = registration.register_client(OP, redirect_uris,
-                                                initial_access_token=args.initial_access_token)
+        reg_info = registration.register_client(OP, redirect_uris)
+#        reg_info = registration.register_client(OP, redirect_uris,
+#                                                initial_access_token=args.initial_access_token)
     except Exception as ex:
         print('Error registering client')
         if args.debug:
